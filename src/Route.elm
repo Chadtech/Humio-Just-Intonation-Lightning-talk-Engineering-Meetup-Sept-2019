@@ -20,6 +20,9 @@ import Url.Parser as Parser exposing ((</>), Parser, s, top)
 
 type Route
     = Title
+    | Definition
+    | Why
+    | End
 
 
 
@@ -86,7 +89,11 @@ next route =
 
 allInCorrectOrder : List Route
 allInCorrectOrder =
-    [ Title ]
+    [ Title
+    , Definition
+    , Why
+    , End
+    ]
 
 
 toUrlString : Route -> String
@@ -94,6 +101,15 @@ toUrlString route =
     case route of
         Title ->
             "title"
+
+        Definition ->
+            "definition"
+
+        Why ->
+            "why"
+
+        End ->
+            "end"
 
 
 fromUrl : Url -> Maybe Route

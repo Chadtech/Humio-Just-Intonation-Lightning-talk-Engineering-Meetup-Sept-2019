@@ -108,18 +108,40 @@ viewRoute route =
         Route.Title ->
             [ View.words
                 [ fontSize (px Units.size6) ]
-                "Just Intonation"
+                "just intonation"
             , View.words
                 [ fontSize (px Units.size6)
                 , marginTop (px Units.size6)
                 ]
-                "by Chadtech"
+                "by chadtech"
             ]
 
+        Route.Definition ->
+            [ View.header "just intonation"
+            , View.header "what is it?"
+            , View.line
+                []
+                "each note on a musical instrument is a unique frequency"
+            , View.line
+                []
+                "if you were to restart all of music from scratch, you would have to pick which frequencies to use"
+            , View.line
+                []
+                "just intonation is a theory about which frequencies go together (harmony)"
+            ]
 
+        Route.Why ->
+            [ View.header "Why"
+            , View.line [] "Why are there 12 notes on a piano?"
+            , View.line [] "Why not 13? Why not 11?"
+            , View.line [] "Why do some notes sound good with each other?"
+            ]
 
-
-
+        Route.End ->
+            [ View.words
+                [ fontSize (px Units.size6) ]
+                "the end"
+            ]
 
 
 buttonColumn : String -> Audio -> Html Msg

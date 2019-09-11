@@ -4413,26 +4413,10 @@ var author$project$Model$init = F2(
 	function (slide, key) {
 		return {audioPlayerHtmlId: 'audio-player', navKey: key, slide: slide, time: 0};
 	});
-var author$project$Route$AdditiveSynthesis = {$: 'AdditiveSynthesis'};
-var author$project$Route$Bars = {$: 'Bars'};
+var author$project$Route$Definition = {$: 'Definition'};
 var author$project$Route$End = {$: 'End'};
-var author$project$Route$GranularSynthesis = {$: 'GranularSynthesis'};
-var author$project$Route$GranularSynthesis__Diagrammed = {$: 'GranularSynthesis__Diagrammed'};
-var author$project$Route$Horns = {$: 'Horns'};
-var author$project$Route$InternetVoiceChat = {$: 'InternetVoiceChat'};
-var author$project$Route$Intro = {$: 'Intro'};
-var author$project$Route$Pipes = {$: 'Pipes'};
-var author$project$Route$Pipes__Error = {$: 'Pipes__Error'};
-var author$project$Route$Pipes__Organ = {$: 'Pipes__Organ'};
-var author$project$Route$SnareDrum = {$: 'SnareDrum'};
-var author$project$Route$SnareDrum__BottomHead = {$: 'SnareDrum__BottomHead'};
-var author$project$Route$SnareDrum__Snare = {$: 'SnareDrum__Snare'};
-var author$project$Route$SnareDrum__Synthesis = {$: 'SnareDrum__Synthesis'};
-var author$project$Route$SnareDrum__TopHead = {$: 'SnareDrum__TopHead'};
-var author$project$Route$SnareDrum__Travel = {$: 'SnareDrum__Travel'};
-var author$project$Route$Theory = {$: 'Theory'};
 var author$project$Route$Title = {$: 'Title'};
-var author$project$Route$Violin = {$: 'Violin'};
+var author$project$Route$Why = {$: 'Why'};
 var elm$core$Basics$EQ = {$: 'EQ'};
 var elm$core$Basics$LT = {$: 'LT'};
 var elm$core$Elm$JsArray$foldr = _JsArray_foldr;
@@ -4514,47 +4498,15 @@ var elm$core$Set$toList = function (_n0) {
 	return elm$core$Dict$keys(dict);
 };
 var author$project$Route$allInCorrectOrder = _List_fromArray(
-	[author$project$Route$Title, author$project$Route$Intro, author$project$Route$Theory, author$project$Route$AdditiveSynthesis, author$project$Route$Pipes, author$project$Route$Pipes__Organ, author$project$Route$Pipes__Error, author$project$Route$Horns, author$project$Route$Bars, author$project$Route$GranularSynthesis, author$project$Route$GranularSynthesis__Diagrammed, author$project$Route$InternetVoiceChat, author$project$Route$Violin, author$project$Route$SnareDrum, author$project$Route$SnareDrum__TopHead, author$project$Route$SnareDrum__Travel, author$project$Route$SnareDrum__BottomHead, author$project$Route$SnareDrum__Snare, author$project$Route$SnareDrum__Synthesis, author$project$Route$End]);
+	[author$project$Route$Title, author$project$Route$Definition, author$project$Route$Why, author$project$Route$End]);
 var author$project$Route$toUrlString = function (route) {
 	switch (route.$) {
 		case 'Title':
 			return 'title';
-		case 'Intro':
-			return 'intro';
-		case 'Theory':
-			return 'theory';
-		case 'AdditiveSynthesis':
-			return 'additive-synthesis';
-		case 'Pipes':
-			return 'pipes';
-		case 'Pipes__Organ':
-			return 'organ';
-		case 'Pipes__Error':
-			return 'pipes-error';
-		case 'Horns':
-			return 'horns';
-		case 'Bars':
-			return 'bars';
-		case 'GranularSynthesis':
-			return 'granular-synthesis';
-		case 'GranularSynthesis__Diagrammed':
-			return 'granular-synthesis-diagrammed';
-		case 'InternetVoiceChat':
-			return 'internet-voice-chat';
-		case 'Violin':
-			return 'violin';
-		case 'SnareDrum':
-			return 'snare-drum';
-		case 'SnareDrum__TopHead':
-			return 'snare-drum-top-head';
-		case 'SnareDrum__Travel':
-			return 'snare-drum-travel';
-		case 'SnareDrum__BottomHead':
-			return 'snare-drum-bottom-head';
-		case 'SnareDrum__Snare':
-			return 'snare-drum-snare';
-		case 'SnareDrum__Synthesis':
-			return 'snare-drum-synthesis';
+		case 'Definition':
+			return 'definition';
+		case 'Why':
+			return 'why';
 		default:
 			return 'end';
 	}
@@ -8618,16 +8570,12 @@ var author$project$Model$formattedTime = function (_n0) {
 };
 var author$project$Msg$GoToTitleClicked = {$: 'GoToTitleClicked'};
 var author$project$Msg$goToTitleClicked = author$project$Msg$GoToTitleClicked;
-var author$project$Audio$ActualSnareDrum = {$: 'ActualSnareDrum'};
-var author$project$Audio$IdealFlute = {$: 'IdealFlute'};
-var author$project$Audio$IdealFlute__SineWave = {$: 'IdealFlute__SineWave'};
-var author$project$Audio$SineWaveDemo = {$: 'SineWaveDemo'};
-var author$project$Audio$SynthesizedSnareDrum = {$: 'SynthesizedSnareDrum'};
-var author$project$Msg$PlayClicked = function (a) {
-	return {$: 'PlayClicked', a: a};
-};
-var author$project$Msg$playClicked = author$project$Msg$PlayClicked;
-var rtfeldman$elm_css$Html$Styled$button = rtfeldman$elm_css$Html$Styled$node('button');
+var author$project$Style$Units$size6 = 128;
+var author$project$Style$Units$size5 = 64;
+var rtfeldman$elm_css$Css$fontSize = rtfeldman$elm_css$Css$prop1('font-size');
+var rtfeldman$elm_css$Css$PxUnits = {$: 'PxUnits'};
+var rtfeldman$elm_css$Css$px = A2(rtfeldman$elm_css$Css$Internal$lengthConverter, rtfeldman$elm_css$Css$PxUnits, 'px');
+var rtfeldman$elm_css$Html$Styled$p = rtfeldman$elm_css$Html$Styled$node('p');
 var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var rtfeldman$elm_css$VirtualDom$Styled$Unstyled = function (a) {
 	return {$: 'Unstyled', a: a};
@@ -8637,75 +8585,6 @@ var rtfeldman$elm_css$VirtualDom$Styled$text = function (str) {
 		elm$virtual_dom$VirtualDom$text(str));
 };
 var rtfeldman$elm_css$Html$Styled$text = rtfeldman$elm_css$VirtualDom$Styled$text;
-var author$project$View$Button$view = F2(
-	function (attrs, label) {
-		return A2(
-			rtfeldman$elm_css$Html$Styled$button,
-			attrs,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Html$Styled$text(label)
-				]));
-	});
-var rtfeldman$elm_css$Css$none = {backgroundImage: rtfeldman$elm_css$Css$Structure$Compatible, blockAxisOverflow: rtfeldman$elm_css$Css$Structure$Compatible, borderStyle: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, display: rtfeldman$elm_css$Css$Structure$Compatible, hoverCapability: rtfeldman$elm_css$Css$Structure$Compatible, inlineAxisOverflow: rtfeldman$elm_css$Css$Structure$Compatible, keyframes: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNone: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNoneOrMinMaxDimension: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, listStyleType: rtfeldman$elm_css$Css$Structure$Compatible, listStyleTypeOrPositionOrImage: rtfeldman$elm_css$Css$Structure$Compatible, none: rtfeldman$elm_css$Css$Structure$Compatible, outline: rtfeldman$elm_css$Css$Structure$Compatible, pointerDevice: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, resize: rtfeldman$elm_css$Css$Structure$Compatible, scriptingSupport: rtfeldman$elm_css$Css$Structure$Compatible, textDecorationLine: rtfeldman$elm_css$Css$Structure$Compatible, textTransform: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, transform: rtfeldman$elm_css$Css$Structure$Compatible, updateFrequency: rtfeldman$elm_css$Css$Structure$Compatible, value: 'none'};
-var elm$virtual_dom$VirtualDom$Normal = function (a) {
-	return {$: 'Normal', a: a};
-};
-var elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
-var rtfeldman$elm_css$VirtualDom$Styled$on = F2(
-	function (eventName, handler) {
-		return A3(
-			rtfeldman$elm_css$VirtualDom$Styled$Attribute,
-			A2(elm$virtual_dom$VirtualDom$on, eventName, handler),
-			_List_Nil,
-			'');
-	});
-var rtfeldman$elm_css$Html$Styled$Events$on = F2(
-	function (event, decoder) {
-		return A2(
-			rtfeldman$elm_css$VirtualDom$Styled$on,
-			event,
-			elm$virtual_dom$VirtualDom$Normal(decoder));
-	});
-var rtfeldman$elm_css$Html$Styled$Events$onClick = function (msg) {
-	return A2(
-		rtfeldman$elm_css$Html$Styled$Events$on,
-		'click',
-		elm$json$Json$Decode$succeed(msg));
-};
-var author$project$Slide$buttonColumn = F2(
-	function (label, audio) {
-		return A2(
-			Chadtech$elm_css_grid$Html$Grid$column,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Css$flex(rtfeldman$elm_css$Css$none)
-				]),
-			_List_fromArray(
-				[
-					A2(
-					author$project$View$Button$view,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Html$Styled$Events$onClick(
-							author$project$Msg$playClicked(audio))
-						]),
-					'play ' + (label + ''))
-				]));
-	});
-var author$project$Audio$ElmVoice = {$: 'ElmVoice'};
-var author$project$Audio$ElmVoice__AllTogether = {$: 'ElmVoice__AllTogether'};
-var author$project$Audio$ElmVoice__E = {$: 'ElmVoice__E'};
-var author$project$Audio$ElmVoice__L = {$: 'ElmVoice__L'};
-var author$project$Audio$ElmVoice__M = {$: 'ElmVoice__M'};
-var author$project$Audio$ElmVoice__Uh = {$: 'ElmVoice__Uh'};
-var author$project$Style$Units$size3 = 16;
-var author$project$Style$Units$size6 = 128;
-var author$project$Style$Units$size5 = 64;
-var rtfeldman$elm_css$Css$fontSize = rtfeldman$elm_css$Css$prop1('font-size');
-var rtfeldman$elm_css$Css$PxUnits = {$: 'PxUnits'};
-var rtfeldman$elm_css$Css$px = A2(rtfeldman$elm_css$Css$Internal$lengthConverter, rtfeldman$elm_css$Css$PxUnits, 'px');
-var rtfeldman$elm_css$Html$Styled$p = rtfeldman$elm_css$Html$Styled$node('p');
 var author$project$View$Helpers$words = F2(
 	function (styles, content) {
 		return A2(
@@ -8760,117 +8639,80 @@ var author$project$View$Helpers$line = F2(
 					A2(author$project$View$Helpers$words, styles, '* ' + content)
 				]));
 	});
-var author$project$View$Image$Caption = function (a) {
-	return {$: 'Caption', a: a};
-};
-var author$project$View$Image$Styles = function (a) {
-	return {$: 'Styles', a: a};
-};
-var author$project$Style$Units$size4 = 32;
-var rtfeldman$elm_css$Css$auto = {alignItemsOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, flexBasis: rtfeldman$elm_css$Css$Structure$Compatible, intOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, justifyContentOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAutoOrCoverOrContain: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, overflow: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, tableLayout: rtfeldman$elm_css$Css$Structure$Compatible, textRendering: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, value: 'auto'};
-var rtfeldman$elm_css$Css$block = {display: rtfeldman$elm_css$Css$Structure$Compatible, value: 'block'};
-var rtfeldman$elm_css$Css$display = rtfeldman$elm_css$Css$prop1('display');
-var rtfeldman$elm_css$Css$height = rtfeldman$elm_css$Css$prop1('height');
-var rtfeldman$elm_css$Css$maxHeight = rtfeldman$elm_css$Css$prop1('max-height');
-var rtfeldman$elm_css$Css$maxWidth = rtfeldman$elm_css$Css$prop1('max-width');
-var rtfeldman$elm_css$Css$width = rtfeldman$elm_css$Css$prop1('width');
-var author$project$View$Image$makeSummary = function (params) {
-	var modifySummary = F2(
-		function (param, summary) {
-			if (param.$ === 'Styles') {
-				var styles = param.a;
-				return _Utils_update(
-					summary,
-					{
-						styles: _Utils_ap(summary.styles, styles)
-					});
-			} else {
-				var str = param.a;
-				return _Utils_update(
-					summary,
-					{
-						maybeCaption: elm$core$Maybe$Just(str)
-					});
-			}
-		});
-	var makeSummaryHelper = F2(
-		function (remainingParams, summary) {
-			if (remainingParams.b) {
-				var first = remainingParams.a;
-				var rest = remainingParams.b;
-				return A2(
-					makeSummaryHelper,
-					rest,
-					A2(modifySummary, first, summary));
-			} else {
-				return summary;
-			}
-		});
-	return A2(
-		makeSummaryHelper,
-		params,
-		{
-			maybeCaption: elm$core$Maybe$Nothing,
-			styles: _List_fromArray(
+var author$project$Slide$viewRoute = function (route) {
+	switch (route.$) {
+		case 'Title':
+			return _List_fromArray(
 				[
-					rtfeldman$elm_css$Css$maxHeight(
-					rtfeldman$elm_css$Css$pct(100)),
-					rtfeldman$elm_css$Css$maxWidth(
-					rtfeldman$elm_css$Css$pct(100)),
-					rtfeldman$elm_css$Css$height(rtfeldman$elm_css$Css$auto),
-					rtfeldman$elm_css$Css$width(rtfeldman$elm_css$Css$auto),
-					rtfeldman$elm_css$Css$display(rtfeldman$elm_css$Css$block)
-				])
-		});
-};
-var author$project$View$Image$snareDrum = elm$core$Basics$append('snare-drum-');
-var author$project$View$Image$toFilePathBase = function (image) {
-	switch (image.$) {
-		case 'Humio':
-			return 'humio';
-		case 'SineWaveDemo':
-			return 'sine-wave-demo';
-		case 'FluteAudio':
-			return 'flute-demo';
-		case 'IdealOrgan':
-			return 'ideal-organ';
-		case 'UnidealOrgan':
-			return 'unideal-organ';
-		case 'OrganPipes':
-			return 'actual-organ-pipes';
-		case 'OrganPipeTypes':
-			return 'organ-pipe-types';
-		case 'PipeResonator':
-			return 'organ-pipe-resonator';
-		case 'FluteBlowSpot':
-			return 'flute-blow-spot';
-		case 'Horn':
-			return 'horn';
-		case 'Xylophone':
-			return 'xylophone';
-		case 'Bell':
-			return 'bell';
-		case 'ElmVoice':
-			return 'elm-voice';
-		case 'ElmVoice__Diagrammed':
-			return 'elm-voice-diagrammed';
-		case 'InternetVoiceChat':
-			return 'internet-voice-chat-grains';
-		case 'Violin_0':
-			return 'violin-demo-0';
-		case 'Violin_1':
-			return 'violin-demo-1';
-		case 'SnareDrum__Punch':
-			return author$project$View$Image$snareDrum('punch');
-		case 'SnareDrum__TopHead':
-			return 'snare-drum-top-head';
-		case 'SnareDrum__Travel':
-			return 'snare-drum-travel';
-		case 'SnareDrum__BottomHead':
-			return 'snare-drum-bottom-head';
+					A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
+						]),
+					'just intonation'),
+					A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6)),
+							rtfeldman$elm_css$Css$marginTop(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
+						]),
+					'by chadtech')
+				]);
+		case 'Definition':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('just intonation'),
+					author$project$View$Helpers$header('what is it?'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'each note on a musical instrument is a unique frequency'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'if you were to restart all of music from scratch, you would have to pick which frequencies to use'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'just intonation is a theory about which frequencies go together (harmony)')
+				]);
+		case 'Why':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('Why'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'Why are there 12 notes on a piano?'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'Why not 13? Why not 11?'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'Why do some notes sound good with each other?')
+				]);
 		default:
-			return 'snare-drum-snares';
+			return _List_fromArray(
+				[
+					A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
+						]),
+					'the end')
+				]);
 	}
+};
+var author$project$Style$Units$size3 = 16;
+var rtfeldman$elm_css$Html$Styled$button = rtfeldman$elm_css$Html$Styled$node('button');
+var author$project$View$Button$view = F2(
+	function (attrs, label) {
+		return A2(
+			rtfeldman$elm_css$Html$Styled$button,
+			attrs,
+			_List_fromArray(
+				[
+					rtfeldman$elm_css$Html$Styled$text(label)
+				]));
+	});
+var rtfeldman$elm_css$Html$Styled$div = rtfeldman$elm_css$Html$Styled$node('div');
+var author$project$View$Helpers$box = function (styles) {
+	return rtfeldman$elm_css$Html$Styled$div(
+		_List_fromArray(
+			[
+				rtfeldman$elm_css$Html$Styled$Attributes$css(styles)
+			]));
 };
 var rtfeldman$elm_css$Css$center = rtfeldman$elm_css$Css$prop1('center');
 var rtfeldman$elm_css$Css$column = _Utils_update(
@@ -8945,818 +8787,30 @@ var rtfeldman$elm_css$Css$justifyContent = function (fn) {
 		'justify-content',
 		fn(rtfeldman$elm_css$Css$Internal$lengthForOverloadedProperty));
 };
-var rtfeldman$elm_css$Html$Styled$div = rtfeldman$elm_css$Html$Styled$node('div');
-var rtfeldman$elm_css$Html$Styled$img = rtfeldman$elm_css$Html$Styled$node('img');
-var rtfeldman$elm_css$VirtualDom$Styled$property = F2(
-	function (key, value) {
+var elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 'Normal', a: a};
+};
+var elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var rtfeldman$elm_css$VirtualDom$Styled$on = F2(
+	function (eventName, handler) {
 		return A3(
 			rtfeldman$elm_css$VirtualDom$Styled$Attribute,
-			A2(elm$virtual_dom$VirtualDom$property, key, value),
+			A2(elm$virtual_dom$VirtualDom$on, eventName, handler),
 			_List_Nil,
 			'');
 	});
-var rtfeldman$elm_css$Html$Styled$Attributes$stringProperty = F2(
-	function (key, string) {
+var rtfeldman$elm_css$Html$Styled$Events$on = F2(
+	function (event, decoder) {
 		return A2(
-			rtfeldman$elm_css$VirtualDom$Styled$property,
-			key,
-			elm$json$Json$Encode$string(string));
+			rtfeldman$elm_css$VirtualDom$Styled$on,
+			event,
+			elm$virtual_dom$VirtualDom$Normal(decoder));
 	});
-var rtfeldman$elm_css$Html$Styled$Attributes$src = function (url) {
-	return A2(rtfeldman$elm_css$Html$Styled$Attributes$stringProperty, 'src', url);
-};
-var author$project$View$Image$view = F2(
-	function (params, image) {
-		var summary = author$project$View$Image$makeSummary(params);
-		var captionView = function () {
-			var _n0 = summary.maybeCaption;
-			if (_n0.$ === 'Just') {
-				var caption = _n0.a;
-				return A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4)),
-							rtfeldman$elm_css$Css$display(rtfeldman$elm_css$Css$block)
-						]),
-					caption);
-			} else {
-				return rtfeldman$elm_css$Html$Styled$text('');
-			}
-		}();
-		return A2(
-			rtfeldman$elm_css$Html$Styled$div,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Html$Styled$Attributes$css(
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column),
-							rtfeldman$elm_css$Css$displayFlex,
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]))
-				]),
-			_List_fromArray(
-				[
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							rtfeldman$elm_css$Html$Styled$img,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Html$Styled$Attributes$src(
-									'./' + (author$project$View$Image$toFilePathBase(image) + '.png')),
-									rtfeldman$elm_css$Html$Styled$Attributes$css(summary.styles)
-								]),
-							_List_Nil)
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-						]),
-					_List_fromArray(
-						[captionView]))
-				]));
-	});
-var rtfeldman$elm_css$Css$spaceAround = rtfeldman$elm_css$Css$prop1('space-around');
-var author$project$Slide$granularSynthesis = function (image) {
-	return _List_fromArray(
-		[
-			author$project$View$Helpers$header('Granular Synthesis'),
-			A2(author$project$View$Helpers$line, _List_Nil, 'Theory that all sounds are sequences of short little sound bits called \"grains\"'),
-			A2(author$project$View$Helpers$line, _List_Nil, 'a \"grain\" of sound is roughly 1ms long'),
-			A2(
-			Chadtech$elm_css_grid$Html$Grid$row,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Css$marginTop(
-					rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-					rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-					rtfeldman$elm_css$Css$flex(
-					rtfeldman$elm_css$Css$int(1))
-				]),
-			_List_fromArray(
-				[
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$column,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$height(
-							rtfeldman$elm_css$Css$pct(100))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							author$project$View$Image$view,
-							_List_fromArray(
-								[
-									author$project$View$Image$Caption('My voice saying \"elm\"'),
-									author$project$View$Image$Styles(
-									_List_fromArray(
-										[
-											rtfeldman$elm_css$Css$width(
-											rtfeldman$elm_css$Css$pct(100))
-										]))
-								]),
-							image)
-						]))
-				])),
-			A2(
-			Chadtech$elm_css_grid$Html$Grid$row,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Css$marginTop(
-					rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-					rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$spaceAround)
-				]),
-			_List_fromArray(
-				[
-					A2(author$project$Slide$buttonColumn, '\"elm\"', author$project$Audio$ElmVoice),
-					A2(author$project$Slide$buttonColumn, '\"e\"', author$project$Audio$ElmVoice__E),
-					A2(author$project$Slide$buttonColumn, '\"l\"', author$project$Audio$ElmVoice__L),
-					A2(author$project$Slide$buttonColumn, '\"m\"', author$project$Audio$ElmVoice__M),
-					A2(author$project$Slide$buttonColumn, '\"uh\"', author$project$Audio$ElmVoice__Uh),
-					A2(author$project$Slide$buttonColumn, 'all together', author$project$Audio$ElmVoice__AllTogether)
-				]))
-		]);
-};
-var author$project$Slide$percussion = elm$core$List$cons(
-	author$project$View$Helpers$header('snare drum'));
-var author$project$View$Helpers$box = function (styles) {
-	return rtfeldman$elm_css$Html$Styled$div(
-		_List_fromArray(
-			[
-				rtfeldman$elm_css$Html$Styled$Attributes$css(styles)
-			]));
-};
-var author$project$View$Image$Bell = {$: 'Bell'};
-var author$project$View$Image$ElmVoice = {$: 'ElmVoice'};
-var author$project$View$Image$ElmVoice__Diagrammed = {$: 'ElmVoice__Diagrammed'};
-var author$project$View$Image$FluteAudio = {$: 'FluteAudio'};
-var author$project$View$Image$FluteBlowSpot = {$: 'FluteBlowSpot'};
-var author$project$View$Image$Horn = {$: 'Horn'};
-var author$project$View$Image$Humio = {$: 'Humio'};
-var author$project$View$Image$IdealOrgan = {$: 'IdealOrgan'};
-var author$project$View$Image$InternetVoiceChat = {$: 'InternetVoiceChat'};
-var author$project$View$Image$OrganPipeTypes = {$: 'OrganPipeTypes'};
-var author$project$View$Image$OrganPipes = {$: 'OrganPipes'};
-var author$project$View$Image$PipeResonator = {$: 'PipeResonator'};
-var author$project$View$Image$SineWaveDemo = {$: 'SineWaveDemo'};
-var author$project$View$Image$SnareDrum__BottomHead = {$: 'SnareDrum__BottomHead'};
-var author$project$View$Image$SnareDrum__Punch = {$: 'SnareDrum__Punch'};
-var author$project$View$Image$SnareDrum__Snare = {$: 'SnareDrum__Snare'};
-var author$project$View$Image$SnareDrum__TopHead = {$: 'SnareDrum__TopHead'};
-var author$project$View$Image$SnareDrum__Travel = {$: 'SnareDrum__Travel'};
-var author$project$View$Image$UnidealOrgan = {$: 'UnidealOrgan'};
-var author$project$View$Image$Violin_0 = {$: 'Violin_0'};
-var author$project$View$Image$Violin_1 = {$: 'Violin_1'};
-var author$project$View$Image$Xylophone = {$: 'Xylophone'};
-var author$project$Slide$viewRoute = function (route) {
-	switch (route.$) {
-		case 'Title':
-			return _List_fromArray(
-				[
-					A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-						]),
-					'What has excited me about audio synthesis theory'),
-					A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6)),
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-						]),
-					'by Chadtech')
-				]);
-		case 'Intro':
-			return _List_fromArray(
-				[
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_Nil,
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column)
-								]),
-							_List_fromArray(
-								[
-									author$project$View$Helpers$header('Humio'),
-									A2(author$project$View$Helpers$line, _List_Nil, 'big and old Elm front end'),
-									A2(author$project$View$Helpers$line, _List_Nil, 'HIRING'),
-									A2(author$project$View$Helpers$line, _List_Nil, 'log management platform'),
-									A2(author$project$View$Helpers$line, _List_Nil, '\"Log Everything and Answer Anything\"')
-								]))
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1)),
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100)),
-									rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Humio)
-								]))
-						]))
-				]);
-		case 'Theory':
-			return _List_fromArray(
-				[
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginBottom(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size5))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							author$project$View$Helpers$words,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$fontSize(
-									rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-								]),
-							'What do I mean by a theory of audio?')
-						])),
-					A2(
-					author$project$View$Helpers$line,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size5))
-						]),
-					'\n                    A model for thinking and talking about sounds\n                    that would make you better at working with sounds\n                    ')
-				]);
-		case 'AdditiveSynthesis':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('Additive Synthesis'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'The theory that all sounds are just combinations of sine waves'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100)),
-									rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SineWaveDemo)
-								]))
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-						]),
-					_List_fromArray(
-						[
-							A2(
-							author$project$View$Button$view,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Html$Styled$Events$onClick(
-									author$project$Msg$playClicked(author$project$Audio$SineWaveDemo))
-								]),
-							'play')
-						]))
-				]);
-		case 'Pipes':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('pipes'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'one cylindrical pipe = one sine wave'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Image$view,
-									_List_fromArray(
-										[
-											author$project$View$Image$Caption('Actual flute recording (totally cherry picked example)'),
-											author$project$View$Image$Styles(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$width(
-													rtfeldman$elm_css$Css$pct(100))
-												]))
-										]),
-									author$project$View$Image$FluteAudio)
-								]))
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$spaceAround)
-						]),
-					_List_fromArray(
-						[
-							A2(author$project$Slide$buttonColumn, 'actual flute recording', author$project$Audio$IdealFlute),
-							A2(author$project$Slide$buttonColumn, 'sine wave of same freq', author$project$Audio$IdealFlute__SineWave)
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100))
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$OrganPipes)
-								]))
-						]))
-				]);
-		case 'Pipes__Organ':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('pipes, organs'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Image$view,
-									_List_fromArray(
-										[
-											author$project$View$Image$Styles(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$width(
-													rtfeldman$elm_css$Css$pct(100))
-												]))
-										]),
-									author$project$View$Image$IdealOrgan)
-								]))
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Image$view,
-									_List_fromArray(
-										[
-											author$project$View$Image$Styles(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$width(
-													rtfeldman$elm_css$Css$pct(100))
-												]))
-										]),
-									author$project$View$Image$UnidealOrgan)
-								]))
-						]))
-				]);
-		case 'Pipes__Error':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('complexity, where does it come from?'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'The error is also sine waves'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size3)),
-							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center),
-							rtfeldman$elm_css$Css$flex(
-							rtfeldman$elm_css$Css$int(1))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_Nil,
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Image$view,
-									_List_fromArray(
-										[
-											author$project$View$Image$Styles(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$width(
-													rtfeldman$elm_css$Css$pct(100))
-												]))
-										]),
-									author$project$View$Image$OrganPipeTypes)
-								])),
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$height(
-									rtfeldman$elm_css$Css$pct(100))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Helpers$box,
-									_List_fromArray(
-										[
-											rtfeldman$elm_css$Css$displayFlex,
-											rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column)
-										]),
-									_List_fromArray(
-										[
-											A2(
-											Chadtech$elm_css_grid$Html$Grid$row,
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-												]),
-											_List_fromArray(
-												[
-													A2(
-													Chadtech$elm_css_grid$Html$Grid$column,
-													_List_fromArray(
-														[
-															rtfeldman$elm_css$Css$height(
-															rtfeldman$elm_css$Css$pct(100))
-														]),
-													_List_fromArray(
-														[
-															A2(
-															author$project$View$Image$view,
-															_List_fromArray(
-																[
-																	author$project$View$Image$Styles(
-																	_List_fromArray(
-																		[
-																			rtfeldman$elm_css$Css$width(
-																			rtfeldman$elm_css$Css$pct(100))
-																		]))
-																]),
-															author$project$View$Image$PipeResonator)
-														]))
-												])),
-											A2(
-											Chadtech$elm_css_grid$Html$Grid$row,
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
-												]),
-											_List_fromArray(
-												[
-													A2(
-													Chadtech$elm_css_grid$Html$Grid$column,
-													_List_fromArray(
-														[
-															rtfeldman$elm_css$Css$height(
-															rtfeldman$elm_css$Css$pct(100))
-														]),
-													_List_fromArray(
-														[
-															A2(
-															author$project$View$Image$view,
-															_List_fromArray(
-																[
-																	author$project$View$Image$Styles(
-																	_List_fromArray(
-																		[
-																			rtfeldman$elm_css$Css$width(
-																			rtfeldman$elm_css$Css$pct(100))
-																		]))
-																]),
-															author$project$View$Image$FluteBlowSpot)
-														]))
-												]))
-										]))
-								]))
-						]))
-				]);
-		case 'Horns':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('horns'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_Nil,
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_Nil,
-							_List_fromArray(
-								[
-									A2(
-									author$project$View$Image$view,
-									_List_fromArray(
-										[
-											author$project$View$Image$Styles(
-											_List_fromArray(
-												[
-													rtfeldman$elm_css$Css$height(
-													rtfeldman$elm_css$Css$px(150))
-												]))
-										]),
-									author$project$View$Image$Horn)
-								]))
-						])),
-					A2(author$project$View$Helpers$line, _List_Nil, 'cylindrical pipe'),
-					A2(author$project$View$Helpers$line, _List_Nil, '-> one sine wave (100 hz)'),
-					A2(author$project$View$Helpers$line, _List_Nil, '------'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'pipe with a horn at the end'),
-					A2(author$project$View$Helpers$line, _List_Nil, '-> many sine waves that are all multiples of one base frequency (100hz, 200hz, 300hz, etc)')
-				]);
-		case 'Bars':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('percussion'),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_Nil,
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$displayFlex,
-									rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column)
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Helpers$line, _List_Nil, 'rectangle'),
-									A2(author$project$View$Helpers$line, _List_Nil, '-> one sine wave'),
-									A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Xylophone)
-								])),
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$displayFlex,
-									rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column)
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Helpers$line, _List_Nil, 'weird shape'),
-									A2(author$project$View$Helpers$line, _List_Nil, '-> many sine waves'),
-									A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Bell)
-								]))
-						]))
-				]);
-		case 'GranularSynthesis':
-			return author$project$Slide$granularSynthesis(author$project$View$Image$ElmVoice);
-		case 'GranularSynthesis__Diagrammed':
-			return author$project$Slide$granularSynthesis(author$project$View$Image$ElmVoice__Diagrammed);
-		case 'InternetVoiceChat':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('internet voice chat'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'Software like skype, slack, zoom, operate on the principles of Granular theory'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'What to do if some grains are missing? Answer : just use the previous grain'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'This works because generally, the grains of a human voice, greatly resemble its neighboring grains'),
-					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$InternetVoiceChat)
-				]);
-		case 'Violin':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('violins'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'the actual wave form of a violin is not particularly elegant'),
-					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Violin_0),
-					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Violin_1)
-				]);
-		case 'SnareDrum':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(author$project$View$Helpers$line, _List_Nil, 'Transform and sequence grains'),
-						A2(author$project$View$Helpers$line, _List_Nil, 'grains can represent physical motion in small time scales'),
-						A2(author$project$View$Helpers$line, _List_Nil, 'the \"grain\" of a drum stick impact:'),
-						A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SnareDrum__Punch)
-					]));
-		case 'SnareDrum__TopHead':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(author$project$View$Helpers$line, _List_Nil, 'the \"grain\" of the drum head shaking:'),
-						A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SnareDrum__TopHead)
-					]));
-		case 'SnareDrum__Travel':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(author$project$View$Helpers$line, _List_Nil, 'the \"grain\" of sound traveling from the top head to the bottom head of the drum:'),
-						A2(author$project$View$Helpers$line, _List_Nil, 'A spike, for the sound pressure that goes directly, and then a lump as sound bounces off the walls of the drum too'),
-						A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SnareDrum__Travel)
-					]));
-		case 'SnareDrum__BottomHead':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(author$project$View$Helpers$line, _List_Nil, 'the \"grain\" of the bottom drum head shaking:'),
-						A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SnareDrum__BottomHead)
-					]));
-		case 'SnareDrum__Snare':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(author$project$View$Helpers$line, _List_Nil, 'the \"grain\" of the bottom drum head rattling up against the metal snares:'),
-						A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$SnareDrum__Snare)
-					]));
-		case 'SnareDrum__Synthesis':
-			return author$project$Slide$percussion(
-				_List_fromArray(
-					[
-						A2(
-						Chadtech$elm_css_grid$Html$Grid$row,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(author$project$Slide$buttonColumn, 'real marching band snare', author$project$Audio$ActualSnareDrum)
-							])),
-						A2(
-						Chadtech$elm_css_grid$Html$Grid$row,
-						_List_fromArray(
-							[
-								rtfeldman$elm_css$Css$marginTop(
-								rtfeldman$elm_css$Css$px(author$project$Style$Units$size3))
-							]),
-						_List_fromArray(
-							[
-								A2(author$project$Slide$buttonColumn, 'synthesized snare drum', author$project$Audio$SynthesizedSnareDrum)
-							]))
-					]));
-		default:
-			return _List_fromArray(
-				[
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_Nil,
-					_List_fromArray(
-						[
-							A2(
-							author$project$View$Helpers$words,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$fontSize(
-									rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-								]),
-							'The End')
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size5))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							author$project$View$Helpers$words,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$fontSize(
-									rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-								]),
-							'Thank you')
-						])),
-					A2(
-					Chadtech$elm_css_grid$Html$Grid$row,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size5))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							Chadtech$elm_css_grid$Html$Grid$column,
-							_List_fromArray(
-								[
-									rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column)
-								]),
-							_List_fromArray(
-								[
-									A2(author$project$View$Helpers$line, _List_Nil, 'github.com/chadtech'),
-									A2(author$project$View$Helpers$line, _List_Nil, 'twitter @TheRealChadtech'),
-									A2(author$project$View$Helpers$line, _List_Nil, 'these slides are an Elm project = github.com/Chadtech/elm-europe-2019-talk')
-								]))
-						]))
-				]);
-	}
+var rtfeldman$elm_css$Html$Styled$Events$onClick = function (msg) {
+	return A2(
+		rtfeldman$elm_css$Html$Styled$Events$on,
+		'click',
+		elm$json$Json$Decode$succeed(msg));
 };
 var author$project$Slide$view = function (slide) {
 	if (slide.$ === 'SlideDoesntExist') {
@@ -9823,6 +8877,7 @@ var author$project$Slide$view = function (slide) {
 		return author$project$Slide$viewRoute(route);
 	}
 };
+var rtfeldman$elm_css$Css$auto = {alignItemsOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, flexBasis: rtfeldman$elm_css$Css$Structure$Compatible, intOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, justifyContentOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAutoOrCoverOrContain: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, overflow: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, tableLayout: rtfeldman$elm_css$Css$Structure$Compatible, textRendering: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, value: 'auto'};
 var rtfeldman$elm_css$Css$prop2 = F3(
 	function (key, argA, argB) {
 		return A2(
@@ -10312,6 +9367,7 @@ var author$project$Style$outdent = rtfeldman$elm_css$Css$batch(
 			rtfeldman$elm_css$Css$solid,
 			Chadtech$ct_colors$Chadtech$Colors$content0)
 		]));
+var author$project$Style$Units$size4 = 32;
 var rtfeldman$elm_css$Css$Preprocess$ExtendSelector = F2(
 	function (a, b) {
 		return {$: 'ExtendSelector', a: a, b: b};
@@ -10333,9 +9389,11 @@ var rtfeldman$elm_css$Css$color = function (c) {
 	return A2(rtfeldman$elm_css$Css$property, 'color', c.value);
 };
 var rtfeldman$elm_css$Css$cursor = rtfeldman$elm_css$Css$prop1('cursor');
+var rtfeldman$elm_css$Css$height = rtfeldman$elm_css$Css$prop1('height');
 var rtfeldman$elm_css$Css$hover = rtfeldman$elm_css$Css$pseudoClass('hover');
 var rtfeldman$elm_css$Css$margin = rtfeldman$elm_css$Css$prop1('margin');
 var rtfeldman$elm_css$Css$minWidth = rtfeldman$elm_css$Css$prop1('min-width');
+var rtfeldman$elm_css$Css$none = {backgroundImage: rtfeldman$elm_css$Css$Structure$Compatible, blockAxisOverflow: rtfeldman$elm_css$Css$Structure$Compatible, borderStyle: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, display: rtfeldman$elm_css$Css$Structure$Compatible, hoverCapability: rtfeldman$elm_css$Css$Structure$Compatible, inlineAxisOverflow: rtfeldman$elm_css$Css$Structure$Compatible, keyframes: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNone: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNoneOrMinMaxDimension: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, listStyleType: rtfeldman$elm_css$Css$Structure$Compatible, listStyleTypeOrPositionOrImage: rtfeldman$elm_css$Css$Structure$Compatible, none: rtfeldman$elm_css$Css$Structure$Compatible, outline: rtfeldman$elm_css$Css$Structure$Compatible, pointerDevice: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, resize: rtfeldman$elm_css$Css$Structure$Compatible, scriptingSupport: rtfeldman$elm_css$Css$Structure$Compatible, textDecorationLine: rtfeldman$elm_css$Css$Structure$Compatible, textTransform: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, transform: rtfeldman$elm_css$Css$Structure$Compatible, updateFrequency: rtfeldman$elm_css$Css$Structure$Compatible, value: 'none'};
 var rtfeldman$elm_css$Css$outline = rtfeldman$elm_css$Css$prop1('outline');
 var rtfeldman$elm_css$Css$padding = rtfeldman$elm_css$Css$prop1('padding');
 var rtfeldman$elm_css$Css$padding2 = rtfeldman$elm_css$Css$prop2('padding');
@@ -10605,6 +9663,7 @@ var author$project$View$Card$view = function (styles) {
 					]))
 			]));
 };
+var rtfeldman$elm_css$Css$maxWidth = rtfeldman$elm_css$Css$prop1('max-width');
 var rtfeldman$elm_css$Html$Styled$audio = rtfeldman$elm_css$Html$Styled$node('audio');
 var elm$virtual_dom$VirtualDom$keyedNode = function (tag) {
 	return _VirtualDom_keyedNode(
@@ -11083,6 +10142,21 @@ var rtfeldman$elm_css$VirtualDom$Styled$toUnstyled = function (vdom) {
 	}
 };
 var rtfeldman$elm_css$Html$Styled$toUnstyled = rtfeldman$elm_css$VirtualDom$Styled$toUnstyled;
+var rtfeldman$elm_css$VirtualDom$Styled$property = F2(
+	function (key, value) {
+		return A3(
+			rtfeldman$elm_css$VirtualDom$Styled$Attribute,
+			A2(elm$virtual_dom$VirtualDom$property, key, value),
+			_List_Nil,
+			'');
+	});
+var rtfeldman$elm_css$Html$Styled$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			rtfeldman$elm_css$VirtualDom$Styled$property,
+			key,
+			elm$json$Json$Encode$string(string));
+	});
 var rtfeldman$elm_css$Html$Styled$Attributes$id = rtfeldman$elm_css$Html$Styled$Attributes$stringProperty('id');
 var author$project$Main$view = function (model) {
 	var timeView = A2(

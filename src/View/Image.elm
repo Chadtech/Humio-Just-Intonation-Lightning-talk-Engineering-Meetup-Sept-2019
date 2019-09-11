@@ -19,28 +19,7 @@ import View.Helpers as View
 
 
 type Image
-    = Humio
-    | SineWaveDemo
-    | FluteAudio
-    | IdealOrgan
-    | UnidealOrgan
-    | OrganPipes
-    | OrganPipeTypes
-    | PipeResonator
-    | FluteBlowSpot
-    | Horn
-    | Xylophone
-    | Bell
-    | ElmVoice
-    | ElmVoice__Diagrammed
-    | InternetVoiceChat
-    | Violin_0
-    | Violin_1
-    | SnareDrum__Punch
-    | SnareDrum__TopHead
-    | SnareDrum__Travel
-    | SnareDrum__BottomHead
-    | SnareDrum__Snare
+    = PianoTuning
 
 
 
@@ -52,76 +31,8 @@ type Image
 toFilePathBase : Image -> String
 toFilePathBase image =
     case image of
-        Humio ->
-            "humio"
-
-        SineWaveDemo ->
-            "sine-wave-demo"
-
-        FluteAudio ->
-            "flute-demo"
-
-        IdealOrgan ->
-            "ideal-organ"
-
-        UnidealOrgan ->
-            "unideal-organ"
-
-        OrganPipes ->
-            "actual-organ-pipes"
-
-        OrganPipeTypes ->
-            "organ-pipe-types"
-
-        PipeResonator ->
-            "organ-pipe-resonator"
-
-        FluteBlowSpot ->
-            "flute-blow-spot"
-
-        Horn ->
-            "horn"
-
-        Xylophone ->
-            "xylophone"
-
-        Bell ->
-            "bell"
-
-        ElmVoice ->
-            "elm-voice"
-
-        ElmVoice__Diagrammed ->
-            "elm-voice-diagrammed"
-
-        InternetVoiceChat ->
-            "internet-voice-chat-grains"
-
-        Violin_0 ->
-            "violin-demo-0"
-
-        Violin_1 ->
-            "violin-demo-1"
-
-        SnareDrum__Punch ->
-            snareDrum "punch"
-
-        SnareDrum__TopHead ->
-            "snare-drum-top-head"
-
-        SnareDrum__Travel ->
-            "snare-drum-travel"
-
-        SnareDrum__BottomHead ->
-            "snare-drum-bottom-head"
-
-        SnareDrum__Snare ->
-            "snare-drum-snares"
-
-
-snareDrum : String -> String
-snareDrum =
-    (++) "snare-drum-"
+        PianoTuning ->
+            "piano-tuning"
 
 
 type Param
