@@ -20,6 +20,11 @@ import View.Helpers as View
 
 type Image
     = PianoTuning
+    | PianoKeys
+    | WorldMap
+    | Timeline
+    | TheirAndOurNotes
+    | ThreeOverTwo
 
 
 
@@ -33,6 +38,21 @@ toFilePathBase image =
     case image of
         PianoTuning ->
             "piano-tuning"
+
+        PianoKeys ->
+            "piano-keys"
+
+        WorldMap ->
+            "world-map"
+
+        Timeline ->
+            "time-line"
+
+        TheirAndOurNotes ->
+            "their-and-our-notes"
+
+        ThreeOverTwo ->
+            "3-over-2"
 
 
 type Param
@@ -105,6 +125,7 @@ view params image =
             [ flexDirection column
             , displayFlex
             , flex (int 1)
+            , justifyContent center
             ]
         ]
         [ Grid.row

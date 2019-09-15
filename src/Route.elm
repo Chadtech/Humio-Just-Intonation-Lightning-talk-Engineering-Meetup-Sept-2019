@@ -20,8 +20,18 @@ import Url.Parser as Parser exposing ((</>), Parser, s, top)
 
 type Route
     = Title
+    | Basics
+    | Today
+    | World
+    | History
+    | TheirAndOurNotes
+    | JustIntonation__Significance
     | Definition
-    | Why
+    | Octave
+    | SmallNumbers
+    | SimpleScale
+    | PrimeNumbers
+    | MajorMinor
     | End
 
 
@@ -90,8 +100,18 @@ next route =
 allInCorrectOrder : List Route
 allInCorrectOrder =
     [ Title
+    , Basics
+    , Today
+    , World
+    , History
+    , TheirAndOurNotes
+    , JustIntonation__Significance
     , Definition
-    , Why
+    , Octave
+    , SmallNumbers
+    , SimpleScale
+    , PrimeNumbers
+    , MajorMinor
     , End
     ]
 
@@ -102,11 +122,41 @@ toUrlString route =
         Title ->
             "title"
 
+        Basics ->
+            "basics"
+
+        Today ->
+            "today"
+
+        World ->
+            "world"
+
+        History ->
+            "history"
+
+        TheirAndOurNotes ->
+            "their-and-our-notes"
+
+        JustIntonation__Significance ->
+            "just-intonation-significance"
+
         Definition ->
             "definition"
 
-        Why ->
-            "why"
+        Octave ->
+            "octave"
+
+        SmallNumbers ->
+            "small-numbers"
+
+        SimpleScale ->
+            "simple-scale"
+
+        PrimeNumbers ->
+            "prime-numbers"
+
+        MajorMinor ->
+            "major-minor"
 
         End ->
             "end"

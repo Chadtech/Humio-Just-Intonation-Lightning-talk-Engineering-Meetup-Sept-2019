@@ -132,6 +132,7 @@ view model =
             Grid.row
                 [ flexDirection column
                 , flex (int 1)
+                , overflow hidden
                 ]
                 (Slide.view model.slide)
 

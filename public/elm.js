@@ -4413,10 +4413,20 @@ var author$project$Model$init = F2(
 	function (slide, key) {
 		return {audioPlayerHtmlId: 'audio-player', navKey: key, slide: slide, time: 0};
 	});
+var author$project$Route$Basics = {$: 'Basics'};
 var author$project$Route$Definition = {$: 'Definition'};
 var author$project$Route$End = {$: 'End'};
+var author$project$Route$History = {$: 'History'};
+var author$project$Route$JustIntonation__Significance = {$: 'JustIntonation__Significance'};
+var author$project$Route$MajorMinor = {$: 'MajorMinor'};
+var author$project$Route$Octave = {$: 'Octave'};
+var author$project$Route$PrimeNumbers = {$: 'PrimeNumbers'};
+var author$project$Route$SimpleScale = {$: 'SimpleScale'};
+var author$project$Route$SmallNumbers = {$: 'SmallNumbers'};
+var author$project$Route$TheirAndOurNotes = {$: 'TheirAndOurNotes'};
 var author$project$Route$Title = {$: 'Title'};
-var author$project$Route$Why = {$: 'Why'};
+var author$project$Route$Today = {$: 'Today'};
+var author$project$Route$World = {$: 'World'};
 var elm$core$Basics$EQ = {$: 'EQ'};
 var elm$core$Basics$LT = {$: 'LT'};
 var elm$core$Elm$JsArray$foldr = _JsArray_foldr;
@@ -4498,15 +4508,35 @@ var elm$core$Set$toList = function (_n0) {
 	return elm$core$Dict$keys(dict);
 };
 var author$project$Route$allInCorrectOrder = _List_fromArray(
-	[author$project$Route$Title, author$project$Route$Definition, author$project$Route$Why, author$project$Route$End]);
+	[author$project$Route$Title, author$project$Route$Basics, author$project$Route$Today, author$project$Route$World, author$project$Route$History, author$project$Route$TheirAndOurNotes, author$project$Route$JustIntonation__Significance, author$project$Route$Definition, author$project$Route$Octave, author$project$Route$SmallNumbers, author$project$Route$SimpleScale, author$project$Route$PrimeNumbers, author$project$Route$MajorMinor, author$project$Route$End]);
 var author$project$Route$toUrlString = function (route) {
 	switch (route.$) {
 		case 'Title':
 			return 'title';
+		case 'Basics':
+			return 'basics';
+		case 'Today':
+			return 'today';
+		case 'World':
+			return 'world';
+		case 'History':
+			return 'history';
+		case 'TheirAndOurNotes':
+			return 'their-and-our-notes';
+		case 'JustIntonation__Significance':
+			return 'just-intonation-significance';
 		case 'Definition':
 			return 'definition';
-		case 'Why':
-			return 'why';
+		case 'Octave':
+			return 'octave';
+		case 'SmallNumbers':
+			return 'small-numbers';
+		case 'SimpleScale':
+			return 'simple-scale';
+		case 'PrimeNumbers':
+			return 'prime-numbers';
+		case 'MajorMinor':
+			return 'major-minor';
 		default:
 			return 'end';
 	}
@@ -8620,9 +8650,24 @@ var author$project$View$Helpers$header = function (content) {
 				content)
 			]));
 };
+var rtfeldman$elm_css$Css$marginTop = rtfeldman$elm_css$Css$prop1('margin-top');
+var author$project$Slide$titleView = _List_fromArray(
+	[
+		author$project$View$Helpers$header('just intonation'),
+		A2(
+		author$project$View$Helpers$words,
+		_List_fromArray(
+			[
+				rtfeldman$elm_css$Css$fontSize(
+				rtfeldman$elm_css$Css$px(author$project$Style$Units$size6)),
+				rtfeldman$elm_css$Css$marginTop(
+				rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
+			]),
+		'by chadtech')
+	]);
+var author$project$Style$Units$size4 = 32;
 var author$project$Style$Units$size2 = 8;
 var rtfeldman$elm_css$Css$marginBottom = rtfeldman$elm_css$Css$prop1('margin-bottom');
-var rtfeldman$elm_css$Css$marginTop = rtfeldman$elm_css$Css$prop1('margin-top');
 var author$project$View$Helpers$line = F2(
 	function (styles, content) {
 		return A2(
@@ -8639,80 +8684,82 @@ var author$project$View$Helpers$line = F2(
 					A2(author$project$View$Helpers$words, styles, '* ' + content)
 				]));
 	});
-var author$project$Slide$viewRoute = function (route) {
-	switch (route.$) {
-		case 'Title':
-			return _List_fromArray(
+var author$project$View$Image$PianoKeys = {$: 'PianoKeys'};
+var author$project$View$Image$TheirAndOurNotes = {$: 'TheirAndOurNotes'};
+var author$project$View$Image$ThreeOverTwo = {$: 'ThreeOverTwo'};
+var author$project$View$Image$Timeline = {$: 'Timeline'};
+var author$project$View$Image$WorldMap = {$: 'WorldMap'};
+var rtfeldman$elm_css$Css$auto = {alignItemsOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, flexBasis: rtfeldman$elm_css$Css$Structure$Compatible, intOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, justifyContentOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAutoOrCoverOrContain: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, overflow: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, tableLayout: rtfeldman$elm_css$Css$Structure$Compatible, textRendering: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, value: 'auto'};
+var rtfeldman$elm_css$Css$block = {display: rtfeldman$elm_css$Css$Structure$Compatible, value: 'block'};
+var rtfeldman$elm_css$Css$display = rtfeldman$elm_css$Css$prop1('display');
+var rtfeldman$elm_css$Css$height = rtfeldman$elm_css$Css$prop1('height');
+var rtfeldman$elm_css$Css$maxHeight = rtfeldman$elm_css$Css$prop1('max-height');
+var rtfeldman$elm_css$Css$maxWidth = rtfeldman$elm_css$Css$prop1('max-width');
+var rtfeldman$elm_css$Css$width = rtfeldman$elm_css$Css$prop1('width');
+var author$project$View$Image$makeSummary = function (params) {
+	var modifySummary = F2(
+		function (param, summary) {
+			if (param.$ === 'Styles') {
+				var styles = param.a;
+				return _Utils_update(
+					summary,
+					{
+						styles: _Utils_ap(summary.styles, styles)
+					});
+			} else {
+				var str = param.a;
+				return _Utils_update(
+					summary,
+					{
+						maybeCaption: elm$core$Maybe$Just(str)
+					});
+			}
+		});
+	var makeSummaryHelper = F2(
+		function (remainingParams, summary) {
+			if (remainingParams.b) {
+				var first = remainingParams.a;
+				var rest = remainingParams.b;
+				return A2(
+					makeSummaryHelper,
+					rest,
+					A2(modifySummary, first, summary));
+			} else {
+				return summary;
+			}
+		});
+	return A2(
+		makeSummaryHelper,
+		params,
+		{
+			maybeCaption: elm$core$Maybe$Nothing,
+			styles: _List_fromArray(
 				[
-					A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-						]),
-					'just intonation'),
-					A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6)),
-							rtfeldman$elm_css$Css$marginTop(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-						]),
-					'by chadtech')
-				]);
-		case 'Definition':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('just intonation'),
-					author$project$View$Helpers$header('what is it?'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'each note on a musical instrument is a unique frequency'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'if you were to restart all of music from scratch, you would have to pick which frequencies to use'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'just intonation is a theory about which frequencies go together (harmony)')
-				]);
-		case 'Why':
-			return _List_fromArray(
-				[
-					author$project$View$Helpers$header('Why'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'Why are there 12 notes on a piano?'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'Why not 13? Why not 11?'),
-					A2(author$project$View$Helpers$line, _List_Nil, 'Why do some notes sound good with each other?')
-				]);
-		default:
-			return _List_fromArray(
-				[
-					A2(
-					author$project$View$Helpers$words,
-					_List_fromArray(
-						[
-							rtfeldman$elm_css$Css$fontSize(
-							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
-						]),
-					'the end')
-				]);
-	}
+					rtfeldman$elm_css$Css$maxHeight(
+					rtfeldman$elm_css$Css$pct(100)),
+					rtfeldman$elm_css$Css$maxWidth(
+					rtfeldman$elm_css$Css$pct(100)),
+					rtfeldman$elm_css$Css$height(rtfeldman$elm_css$Css$auto),
+					rtfeldman$elm_css$Css$width(rtfeldman$elm_css$Css$auto),
+					rtfeldman$elm_css$Css$display(rtfeldman$elm_css$Css$block)
+				])
+		});
 };
-var author$project$Style$Units$size3 = 16;
-var rtfeldman$elm_css$Html$Styled$button = rtfeldman$elm_css$Html$Styled$node('button');
-var author$project$View$Button$view = F2(
-	function (attrs, label) {
-		return A2(
-			rtfeldman$elm_css$Html$Styled$button,
-			attrs,
-			_List_fromArray(
-				[
-					rtfeldman$elm_css$Html$Styled$text(label)
-				]));
-	});
-var rtfeldman$elm_css$Html$Styled$div = rtfeldman$elm_css$Html$Styled$node('div');
-var author$project$View$Helpers$box = function (styles) {
-	return rtfeldman$elm_css$Html$Styled$div(
-		_List_fromArray(
-			[
-				rtfeldman$elm_css$Html$Styled$Attributes$css(styles)
-			]));
+var author$project$View$Image$toFilePathBase = function (image) {
+	switch (image.$) {
+		case 'PianoTuning':
+			return 'piano-tuning';
+		case 'PianoKeys':
+			return 'piano-keys';
+		case 'WorldMap':
+			return 'world-map';
+		case 'Timeline':
+			return 'time-line';
+		case 'TheirAndOurNotes':
+			return 'their-and-our-notes';
+		default:
+			return '3-over-2';
+	}
 };
 var rtfeldman$elm_css$Css$center = rtfeldman$elm_css$Css$prop1('center');
 var rtfeldman$elm_css$Css$column = _Utils_update(
@@ -8786,6 +8833,299 @@ var rtfeldman$elm_css$Css$justifyContent = function (fn) {
 		'justifyContent',
 		'justify-content',
 		fn(rtfeldman$elm_css$Css$Internal$lengthForOverloadedProperty));
+};
+var rtfeldman$elm_css$Html$Styled$div = rtfeldman$elm_css$Html$Styled$node('div');
+var rtfeldman$elm_css$Html$Styled$img = rtfeldman$elm_css$Html$Styled$node('img');
+var rtfeldman$elm_css$VirtualDom$Styled$property = F2(
+	function (key, value) {
+		return A3(
+			rtfeldman$elm_css$VirtualDom$Styled$Attribute,
+			A2(elm$virtual_dom$VirtualDom$property, key, value),
+			_List_Nil,
+			'');
+	});
+var rtfeldman$elm_css$Html$Styled$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			rtfeldman$elm_css$VirtualDom$Styled$property,
+			key,
+			elm$json$Json$Encode$string(string));
+	});
+var rtfeldman$elm_css$Html$Styled$Attributes$src = function (url) {
+	return A2(rtfeldman$elm_css$Html$Styled$Attributes$stringProperty, 'src', url);
+};
+var author$project$View$Image$view = F2(
+	function (params, image) {
+		var summary = author$project$View$Image$makeSummary(params);
+		var captionView = function () {
+			var _n0 = summary.maybeCaption;
+			if (_n0.$ === 'Just') {
+				var caption = _n0.a;
+				return A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4)),
+							rtfeldman$elm_css$Css$display(rtfeldman$elm_css$Css$block)
+						]),
+					caption);
+			} else {
+				return rtfeldman$elm_css$Html$Styled$text('');
+			}
+		}();
+		return A2(
+			rtfeldman$elm_css$Html$Styled$div,
+			_List_fromArray(
+				[
+					rtfeldman$elm_css$Html$Styled$Attributes$css(
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column),
+							rtfeldman$elm_css$Css$displayFlex,
+							rtfeldman$elm_css$Css$flex(
+							rtfeldman$elm_css$Css$int(1)),
+							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
+						]))
+				]),
+			_List_fromArray(
+				[
+					A2(
+					Chadtech$elm_css_grid$Html$Grid$row,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
+						]),
+					_List_fromArray(
+						[
+							A2(
+							rtfeldman$elm_css$Html$Styled$img,
+							_List_fromArray(
+								[
+									rtfeldman$elm_css$Html$Styled$Attributes$src(
+									'./' + (author$project$View$Image$toFilePathBase(image) + '.png')),
+									rtfeldman$elm_css$Html$Styled$Attributes$css(summary.styles)
+								]),
+							_List_Nil)
+						])),
+					A2(
+					Chadtech$elm_css_grid$Html$Grid$row,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$justifyContent(rtfeldman$elm_css$Css$center)
+						]),
+					_List_fromArray(
+						[captionView]))
+				]));
+	});
+var rtfeldman$elm_css$Css$pre = {value: 'pre', whiteSpace: rtfeldman$elm_css$Css$Structure$Compatible};
+var rtfeldman$elm_css$Css$whiteSpace = rtfeldman$elm_css$Css$prop1('white-space');
+var author$project$Slide$viewRoute = function (route) {
+	switch (route.$) {
+		case 'Title':
+			return author$project$Slide$titleView;
+		case 'Basics':
+			return _List_fromArray(
+				[
+					A2(author$project$View$Helpers$line, _List_Nil, 'by \"note\" I really mean frequency, as in, a vibration that happens a certain number of times per second'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'musical instruments produce frequencies'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'the basic problem of intonation, is \"what frequencies should my instrument by designed to make?\"')
+				]);
+		case 'Today':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('where are we today?'),
+					A2(author$project$View$Helpers$words, _List_Nil, 'we use these notes'),
+					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$PianoKeys)
+				]);
+		case 'World':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('where are we today?'),
+					A2(author$project$View$Helpers$words, _List_Nil, 'countries where those notes are common are marked in gray'),
+					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$WorldMap)
+				]);
+		case 'History':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('where are we today?'),
+					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$Timeline)
+				]);
+		case 'TheirAndOurNotes':
+			return _List_fromArray(
+				[
+					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$TheirAndOurNotes)
+				]);
+		case 'JustIntonation__Significance':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('just intonation'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'among the music cultures that used notes, most were using just intonation')
+				]);
+		case 'Definition':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('just intonation :='),
+					A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6)),
+							rtfeldman$elm_css$Css$marginBottom(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size5))
+						]),
+					'notes that have fractional relationships to each other'),
+					A2(author$project$View$Helpers$line, _List_Nil, '300 hz / 200 hz = 3/2'),
+					A2(author$project$View$Helpers$line, _List_Nil, '3/2 is a fraction, so 300 and 200 hertz are two notes in a just intonation system')
+				]);
+		case 'Octave':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('octave'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'an octave up is 2/1'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'an octave down is 1/2'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'octaves sound like they are the same thing'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'The octave of \"C#\" is also \"C#\"')
+				]);
+		case 'SmallNumbers':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('small numbers'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'the smaller the numbers in the fraction, the simpler the harmony'),
+					A2(author$project$View$Image$view, _List_Nil, author$project$View$Image$ThreeOverTwo),
+					A2(author$project$View$Helpers$line, _List_Nil, '3/2 is roughly the equivalent of a \"fifth\" interval on a piano, C to G')
+				]);
+		case 'SimpleScale':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('scales'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'a scale is just a set of notes'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'in just intonation a note is a fraction'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'so a just scale is a set of fractions'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$marginBottom(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4))
+						]),
+					'Ling Lun\'s scale from 3000 BCE:'),
+					A2(author$project$View$Helpers$line, _List_Nil, '1/1, 9/8, 81/64, 3/2, 27/16, 2/1')
+				]);
+		case 'PrimeNumbers':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('prime numbers'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'the character of musical scales seems to derive from the organization and selection of prime numbers in the notes of the scale'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$marginBottom(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4))
+						]),
+					'Ling Lun\'s scale from 3000 BCE:'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'1             / 1'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'3 * 3         / 2 * 2 * 2'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'3 * 3 * 3 * 3 / 2 * 2 * 2 * 2 * 2 * 2'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'3             / 2'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'3 * 3 * 3     / 2 * 2 * 2 * 2'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$whiteSpace(rtfeldman$elm_css$Css$pre)
+						]),
+					'2             / 1')
+				]);
+		case 'MajorMinor':
+			return _List_fromArray(
+				[
+					author$project$View$Helpers$header('prime numbers'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'major chord: 5 and 3 in the numerator'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$marginBottom(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4))
+						]),
+					'1/1, 5/4, 3/2, 15/8'),
+					A2(author$project$View$Helpers$line, _List_Nil, 'minor chord: 3 in the numerator, 5 in the denominator'),
+					A2(
+					author$project$View$Helpers$line,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$marginBottom(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size4))
+						]),
+					'1/1, 6/5, 3/2, 8/5'),
+					A2(author$project$View$Helpers$line, _List_Nil, '\"slendro\", an indonesian scale: 7 and 3, top and bottom'),
+					A2(author$project$View$Helpers$line, _List_Nil, '1/1, 8/7, 21/16, 32/21, 7/4, 2/1')
+				]);
+		default:
+			return _List_fromArray(
+				[
+					A2(
+					author$project$View$Helpers$words,
+					_List_fromArray(
+						[
+							rtfeldman$elm_css$Css$fontSize(
+							rtfeldman$elm_css$Css$px(author$project$Style$Units$size6))
+						]),
+					'the end')
+				]);
+	}
+};
+var author$project$Style$Units$size3 = 16;
+var rtfeldman$elm_css$Html$Styled$button = rtfeldman$elm_css$Html$Styled$node('button');
+var author$project$View$Button$view = F2(
+	function (attrs, label) {
+		return A2(
+			rtfeldman$elm_css$Html$Styled$button,
+			attrs,
+			_List_fromArray(
+				[
+					rtfeldman$elm_css$Html$Styled$text(label)
+				]));
+	});
+var author$project$View$Helpers$box = function (styles) {
+	return rtfeldman$elm_css$Html$Styled$div(
+		_List_fromArray(
+			[
+				rtfeldman$elm_css$Html$Styled$Attributes$css(styles)
+			]));
 };
 var elm$virtual_dom$VirtualDom$Normal = function (a) {
 	return {$: 'Normal', a: a};
@@ -8877,7 +9217,6 @@ var author$project$Slide$view = function (slide) {
 		return author$project$Slide$viewRoute(route);
 	}
 };
-var rtfeldman$elm_css$Css$auto = {alignItemsOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, cursor: rtfeldman$elm_css$Css$Structure$Compatible, flexBasis: rtfeldman$elm_css$Css$Structure$Compatible, intOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, justifyContentOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAuto: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrAutoOrCoverOrContain: rtfeldman$elm_css$Css$Structure$Compatible, lengthOrNumberOrAutoOrNoneOrContent: rtfeldman$elm_css$Css$Structure$Compatible, overflow: rtfeldman$elm_css$Css$Structure$Compatible, pointerEvents: rtfeldman$elm_css$Css$Structure$Compatible, tableLayout: rtfeldman$elm_css$Css$Structure$Compatible, textRendering: rtfeldman$elm_css$Css$Structure$Compatible, touchAction: rtfeldman$elm_css$Css$Structure$Compatible, value: 'auto'};
 var rtfeldman$elm_css$Css$prop2 = F3(
 	function (key, argA, argB) {
 		return A2(
@@ -9367,7 +9706,6 @@ var author$project$Style$outdent = rtfeldman$elm_css$Css$batch(
 			rtfeldman$elm_css$Css$solid,
 			Chadtech$ct_colors$Chadtech$Colors$content0)
 		]));
-var author$project$Style$Units$size4 = 32;
 var rtfeldman$elm_css$Css$Preprocess$ExtendSelector = F2(
 	function (a, b) {
 		return {$: 'ExtendSelector', a: a, b: b};
@@ -9389,7 +9727,6 @@ var rtfeldman$elm_css$Css$color = function (c) {
 	return A2(rtfeldman$elm_css$Css$property, 'color', c.value);
 };
 var rtfeldman$elm_css$Css$cursor = rtfeldman$elm_css$Css$prop1('cursor');
-var rtfeldman$elm_css$Css$height = rtfeldman$elm_css$Css$prop1('height');
 var rtfeldman$elm_css$Css$hover = rtfeldman$elm_css$Css$pseudoClass('hover');
 var rtfeldman$elm_css$Css$margin = rtfeldman$elm_css$Css$prop1('margin');
 var rtfeldman$elm_css$Css$minWidth = rtfeldman$elm_css$Css$prop1('min-width');
@@ -9663,7 +10000,8 @@ var author$project$View$Card$view = function (styles) {
 					]))
 			]));
 };
-var rtfeldman$elm_css$Css$maxWidth = rtfeldman$elm_css$Css$prop1('max-width');
+var rtfeldman$elm_css$Css$hidden = {borderStyle: rtfeldman$elm_css$Css$Structure$Compatible, overflow: rtfeldman$elm_css$Css$Structure$Compatible, value: 'hidden', visibility: rtfeldman$elm_css$Css$Structure$Compatible};
+var rtfeldman$elm_css$Css$overflow = rtfeldman$elm_css$Css$prop1('overflow');
 var rtfeldman$elm_css$Html$Styled$audio = rtfeldman$elm_css$Html$Styled$node('audio');
 var elm$virtual_dom$VirtualDom$keyedNode = function (tag) {
 	return _VirtualDom_keyedNode(
@@ -10142,21 +10480,6 @@ var rtfeldman$elm_css$VirtualDom$Styled$toUnstyled = function (vdom) {
 	}
 };
 var rtfeldman$elm_css$Html$Styled$toUnstyled = rtfeldman$elm_css$VirtualDom$Styled$toUnstyled;
-var rtfeldman$elm_css$VirtualDom$Styled$property = F2(
-	function (key, value) {
-		return A3(
-			rtfeldman$elm_css$VirtualDom$Styled$Attribute,
-			A2(elm$virtual_dom$VirtualDom$property, key, value),
-			_List_Nil,
-			'');
-	});
-var rtfeldman$elm_css$Html$Styled$Attributes$stringProperty = F2(
-	function (key, string) {
-		return A2(
-			rtfeldman$elm_css$VirtualDom$Styled$property,
-			key,
-			elm$json$Json$Encode$string(string));
-	});
 var rtfeldman$elm_css$Html$Styled$Attributes$id = rtfeldman$elm_css$Html$Styled$Attributes$stringProperty('id');
 var author$project$Main$view = function (model) {
 	var timeView = A2(
@@ -10191,7 +10514,8 @@ var author$project$Main$view = function (model) {
 			[
 				rtfeldman$elm_css$Css$flexDirection(rtfeldman$elm_css$Css$column),
 				rtfeldman$elm_css$Css$flex(
-				rtfeldman$elm_css$Css$int(1))
+				rtfeldman$elm_css$Css$int(1)),
+				rtfeldman$elm_css$Css$overflow(rtfeldman$elm_css$Css$hidden)
 			]),
 		author$project$Slide$view(model.slide));
 	return {
